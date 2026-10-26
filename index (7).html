@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>راهنمای انتشار سایت و دانلود فایل</title>
+<style>
+  :root{ --bg:#0f172a; --card:#1e293b; --acc:#38bdf8; --acc2:#22c55e; --txt:#e2e8f0; --muted:#94a3b8; }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Vazirmatn,Tahoma,system-ui,sans-serif;background:linear-gradient(160deg,#0b1220,#111c33 60%,#0b1220);color:var(--txt);line-height:2}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 18px 80px}
+  header{text-align:center;padding:36px 18px;background:radial-gradient(circle at 50% 0%,rgba(56,189,248,.25),transparent 70%);border-radius:24px;border:1px solid #1f2c45}
+  h1{margin:0 0 10px;font-size:1.9rem;color:#fff}
+  h2{color:var(--acc);font-size:1.25rem;margin-top:38px;border-right:4px solid var(--acc);padding-right:12px}
+  h3{color:#7dd3fc;margin-bottom:6px}
+  p.lead{color:var(--muted);margin:0}
+  .card{background:var(--card);border:1px solid #27364f;border-radius:16px;padding:20px;margin-top:16px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:#06202e;font-weight:700;border:0;border-radius:12px;padding:14px 26px;font-size:1.05rem;cursor:pointer;text-decoration:none;box-shadow:0 8px 22px rgba(56,189,248,.35);transition:.2s}
+  .btn:hover{transform:translateY(-2px);background:#7dd3fc}
+  .btn.green{background:var(--acc2);color:#052e16;box-shadow:0 8px 22px rgba(34,197,94,.3)}
+  .btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc);box-shadow:none}
+  .center{text-align:center}
+  code,pre{font-family:Consolas,Menlo,monospace;direction:ltr;display:inline-block}
+  pre{background:#0b1220;border:1px solid #26344c;border-radius:12px;padding:14px;width:100%;overflow:auto;direction:ltr;text-align:left;color:#cbd5e1}
+  .steps{counter-reset:s}
+  .steps>li{margin-bottom:14px}
+  ol{list-style:none;padding:0;counter-reset:s}
+  ol li{counter-increment:s;position:relative;padding-right:42px;margin-bottom:14px}
+  ol li::before{content:counter(s);position:absolute;right:0;top:2px;width:28px;height:28px;background:var(--acc);color:#06202e;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+  table{width:100%;border-collapse:collapse;margin-top:12px;font-size:.95rem}
+  th,td{border:1px solid #2b3a55;padding:10px;text-align:right}
+  th{background:#16233a;color:#7dd3fc}
+  .muted{color:var(--muted);font-size:.9rem}
+  .tag{display:inline-block;background:#0e7490;color:#e0f2fe;border-radius:999px;padding:2px 12px;font-size:.82rem;margin-left:6px}
+  footer{margin-top:50px;text-align:center;color:var(--muted);font-size:.85rem;border-top:1px solid #1f2c45;padding-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🎯 سایت شما آمادهٔ انتشار است</h1>
+  <p class="lead">ابتدا فایل را دانلود کنید، سپس با یکی از روش‌های زیر آن را روی هاست/سرور قرار دهید تا سایت زنده شود.</p>
+  <div class="center" style="margin-top:22px">
+    <a class="btn" id="dl" download="index.html" href="#">⬇️ دانلود فایل index.html</a>
+    <a class="btn green" href="https://app.netlify.com/drop" target="_blank" rel="noopener">🚀 انتشار آنی رایگان (Netlify Drop)</a>
+  </div>
+</header>
+
+<h2>۱) دانلود فایل</h2>
+<div class="card">
+  <p>دکمهٔ بالا فایل <code>index.html</code> را روی کامپیوتر شما ذخیره می‌کند. اگر روی موبایل هستید، فایل را در پوشهٔ <b>Downloads</b> نگه دارید و بعداً با گوشی به هاست منتقل کنید.</p>
+  <p class="muted">نکته: پسوند فایل حتماً باید <code>.html</code> باشد (نه <code>.html.txt</code>). برای ویرایش، فایل را با Notepad++ / VS Code باز کنید.</p>
+</div>
+
+<h2>۲) رایگان‌ترین و سریع‌ترین روش: Netlify Drop</h2>
+<div class="card">
+  <ol>
+    <li>روی دکمهٔ سبز بالا کلیک کنید (یا به <code>app.netlify.com/drop</code> بروید).</li>
+    <li>فایل <code>index.html</code> را بکشید و داخل کادر رها کنید (Drag &amp; Drop).</li>
+    <li>چند ثانیه صبر کنید؛ آدرسی مثل <code>https://your-site-name.netlify.app</code> به شما داده می‌شود.</li>
+    <li>همین آدرس، آدرس سایت شماست و رایگان است. می‌توانید دامنهٔ دلخواه را بعداً وصل کنید.</li>
+  </ol>
+  <p class="muted">مزیت: بدون کارت بانکی، بدون تنظیمات فنی، SSL رایگان. مناسب تست و سایت‌های کوچک.</p>
+</div>
+
+<h2>۳) روش دوم: GitHub Pages (رایگان)</h2>
+<div class="card">
+  <ol>
+    <li>در GitHub یک مخزن (Repository) جدید بسازید و آن را Public کنید.</li>
+    <li>فایل <code>index.html</code> را در ریشهٔ مخزن آپلود کنید (دکمهٔ <b>Add file → Upload files</b>).</li>
+    <li>به مسیر <b>Settings → Pages</b> بروید، Source را روی <b>main / (root)</b> بگذارید و Save کنید.</li>
+    <li>پس از ۱ تا ۳ دقیقه سایت روی <code>https://username.github.io/repo/</code> بالا می‌آید.</li>
+  </ol>
+</div>
+
+<h2>۴) روش سوم: هاست اشتراکی (cPanel / FTP) — سایت اصلی</h2>
+<div class="card">
+  <ol>
+    <li>از شرکت هاستینگ، اطلاعات <b>FTP</b> یا کنترل‌پنل <b>cPanel</b> را بگیرید (Host / Username / Password / Port).</li>
+    <li>فایل <code>index.html</code> را با FileZilla به مسیر <code>public_html/</code> آپلود کنید.</li>
+    <li>دامنه را در بخش <b>Domains</b> پنل به هاست وصل کنید (اگر دامنه دارید).</li>
+    <li>دکمهٔ «تست/آزمایش» یا «Publish» را بزنید تا سایت منتشر شود. گاهی ۵ تا ۱۵ دقیقه طول می‌کشد.</li>
+  </ol>
+  <pre>Host: ftp.yourhost.com
+User: your-username
+Pass: your-password
+Port: 21
+Remote path: /public_html/index.html</pre>
+</div>
+
+<h2>۵) روش چهارم: سرور اختصاصی / VPS (لینوکس)</h2>
+<div class="card">
+  <ol>
+    <li>فایل را با <code>scp</code> یا WinSCP روی سرور کپی کنید:</li>
+  </ol>
+  <pre>scp index.html user@your-server-ip:/var/www/html/</pre>
+  <ol start="2">
+    <li>وب‌سرور Nginx را نصب و فایل را به ریشهٔ سایت بسپارید:</li>
+  </ol>
+  <pre>sudo apt update &amp;&amp; sudo apt install -y nginx
+sudo cp index.html /var/www/html/index.html
+sudo systemctl enable --now nginx</pre>
+  <ol start="3">
+    <li>فایل تنظیمات سایت را بسازید:</li>
+  </ol>
+  <pre>sudo nano /etc/nginx/sites-available/mysite
+---
+server {
+    listen 80;
+    server_name your-domain.com www.your-domain.com;
+    root /var/www/html;
+    index index.html;
+    location / { try_files $uri $uri/ =404; }
+}
+---
+sudo ln -s /etc/nginx/sites-available/mysite /etc/nginx/sites-enabled/
+sudo nginx -t &amp;&amp; sudo systemctl reload nginx</pre>
+  <ol start="4">
+    <li>برای SSL رایگان از <b>Certbot</b> استفاده کنید:</li>
+  </ol>
+  <pre>sudo apt install -y certbot python3-certbot-nginx
+sudo certbot --nginx -d your-domain.com -d www.your-domain.com</pre>
+  <ol start="5">
+    <li>پورت ۸۰ و ۴۴۳ را در فایروال باز کنید تا سایت از بیرون دیده شود.</li>
+  </ol>
+</div>
+
+<h2>۶) کدام روش برای من مناسب است؟</h2>
+<div class="card">
+  <table>
+    <tr><th>نیاز شما</th><th>پیشنهاد</th><th>هزینه</th></tr>
+    <tr><td>فقط تست سریع / نمونه‌کار</td><td>Netlify Drop یا GitHub Pages</td><td>رایگان</td></tr>
+    <tr><td>سایت فارسی با دامنهٔ شخصی</td><td>هاست اشتراکی cPanel</td><td>ماهانه</td></tr>
+    <tr><td>کنترل کامل و سرعت بالا</td><td>VPS + Nginx</td><td>ماهانه</td></tr>
+  </table>
+  <p class="muted">هر سه روش نهایتاً یک فایل HTML روی سرور قرار می‌دهند؛ تفاوت فقط در ابزار و میزبانی است.</p>
+</div>
+
+<h2>۷) چک‌لیست نهایی</h2>
+<div class="card">
+  <ul>
+    <li>نام فایل دقیقاً <code>index.html</code> باشد و در <b>ریشهٔ</b> پوشهٔ سایت قرار بگیرد.</li>
+    <li>حروف بزرگ/کوچک نام فایل مهم است (<code>Index.html</code> روی بعضی سرورها کار نمی‌کند).</li>
+    <li>اگر فایل‌های دیگری (CSS/JS/تصویر) دارید، آن‌ها را هم آپلود کنید و مسیرها را بررسی کنید.</li>
+    <li>پس از آپلود، چند دقیقه صبر کنید و سپس آدرس دامنه را باز کنید.</li>
+    <li>در صورت خطای ۴۰۴: فایل در مسیر درست نیست یا نامش اشتباه است.</li>
+  </ul>
+</div>
+
+<footer>ساخته‌شده برای انتشار سریع سایت شما — همین فایل، همان چیزی است که باید روی هاست قرار بگیرد.</footer>
+</div>
+
+<script>
+  // ساخت فایل از همین صفحه و فعال‌کردن دانلود (بدون نیاز به سرور)
+  const pageHTML = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  const blob = new Blob([pageHTML], {type:'text/html;charset=utf-8'});
+  document.getElementById('dl').href = URL.createObjectURL(blob);
+</script>
+</body>
+</html>
